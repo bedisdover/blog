@@ -1,7 +1,9 @@
 ---
 title: dpkg 安装 deb 包依赖
 date: 2018-10-14 22:50:45
-tags: linux, dpkg
+tags: 
+  - Linux
+  - dpkg
 categories: 日常记录
 ---
 

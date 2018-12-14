@@ -1,10 +1,10 @@
 ---
 title: JavaScript 监听文本框内容变化
 date: 2018-10-14 23:02:55
-tags: 
-  - JavaScript
+tags:
   - event
-categories: 日常记录
+categories:
+  - JavaScript
 ---
 
 ### html代码

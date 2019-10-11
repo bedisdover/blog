@@ -1,7 +1,7 @@
 ---
 title: dpkg 安装 deb 包依赖
 date: 2018-10-14 22:50:45
-tags: 
+tags:
   - Linux
   - dpkg
 categories: 日常记录
@@ -9,7 +9,7 @@ categories: 日常记录
 
 通过 `dpkg` 命令安装 `.deb` 包时，经常会出现未安装依赖的情况，如安装有道词典时报错：
 
-```
+```text
 dpkg: dependency problems prevent configuration of youdao-dict:                                                       
  youdao-dict depends on tesseract-ocr; however:    
   Package tesseract-ocr is not installed.                                                                           
@@ -35,7 +35,7 @@ dpkg: dependency problems prevent configuration of youdao-dict:
 
 可以通过 `apt` 命令安装所需依赖，使用 `-f` 选项修复依赖
 
-```
+```bash
 sudo apt -f -y install
 ```
 

@@ -26,7 +26,7 @@ categories:
 
 ### 初始化
 
-```
+```bash
 git flow init
 ```
 
@@ -42,22 +42,22 @@ git flow init
 
 `feature` 分支用于开发新需求，从 `develop` 分支新建，开发结束后需要合并回 `develop`。
 
-```
-// 新增 feature 分支
+```bash
+# 新增 feature 分支
 git flow feature start feature_branch
 
-// 发布到远程仓库
+# 发布到远程仓库
 git flow feature publish feature_branch
 
-// 提交代码
+# 提交代码
 git add <git-file>
 git commit -a
 git push
 
-// 合并至develop
+# 合并至develop
 git flow feature finish feature_branch
 
-// 推送至远程仓库
+# 推送至远程仓库
 git push
 ```
 
@@ -65,22 +65,22 @@ git push
 
 `hotfix` 分支用于修复线上 `bug`，从 `master` 分支新建，开发结束后需要合并至 `develop` 和 `master`。
 
-```
-// 新增 hotfix 分支
+```bash
+# 新增 hotfix 分支
 git flow hotfix start hotfix_branch
 
-// 发布到远程仓库
+# 发布到远程仓库
 git flow hotfix publish hotfix_branch
 
-// 提交代码
+# 提交代码
 git add <git-file>
 git commit -a
 git push
 
-// 合并至 master, develop
+# 合并至 master, develop
 git flow hotfix finish hotfix_branch
 
-// 推送至远程仓库(当前位于 develop 分支)
+# 推送至远程仓库(当前位于 develop 分支)
 git push
 git checkout master
 git push
@@ -90,13 +90,13 @@ git push
 
 ### start
 
-```
+```bash
 git flow feature start feature_branch
 ```
 
 等价于
 
-```
+```bash
 git config --local gitflow.branch.feature/feature_branch.base develop
 git checkout -b feature/feature_branch develop
 ```
@@ -105,13 +105,13 @@ git checkout -b feature/feature_branch develop
 
 ### publish
 
-```
+```bash
 git flow feature publish feature_branch
 ```
 
 等价于
 
-```
+```bash
 git fetch -q origin
 git push -u origin feature/feature_branch:feature/feature_branch
 git fetch -q origin feature/feature_branch
@@ -124,13 +124,13 @@ git checkout feature/feature_branch
 
 #### feature
 
-```
+```bash
 git flow feature finish feature_branch
 ```
 
 等价于
 
-```
+```bash
 git fetch -q origin feature/feature_branch
 git checkout develop
 git merge --no-ff feature/feature_branch
@@ -139,13 +139,13 @@ git branch -d feature/feature_branch
 
 ### hotfix
 
-```
+```bash
 git flow hotfix finish hotfix_branch
 ```
 
 等价于
 
-```
+```bash
 git checkout master
 git merge --no-ff hotfix/hotfix_branch
 git tag -a hotfix_branch

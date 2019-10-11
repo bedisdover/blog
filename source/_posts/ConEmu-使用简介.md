@@ -29,7 +29,7 @@ categories:
 
 `Settings` -> `Startup` -> `Environment`，添加以下内容：
 
-```
+```bash
 chcp utf8
 ```
 
@@ -39,7 +39,7 @@ chcp utf8
 
 `~/.bashrc` 添加以下内容：
 
-```
+```bash
 if [[ -n "${ConEmuPID}" ]]; then
   PROMPT_COMMAND='ConEmuC -StoreCWD'
 fi
@@ -49,7 +49,7 @@ fi
 
 `~/.zshrc` 添加以下内容：
 
-```
+```zsh
 set_conemu_cwd() { ConEmuC -StoreCWD }
 precmd_functions+=set_conemu_cwd
 ```

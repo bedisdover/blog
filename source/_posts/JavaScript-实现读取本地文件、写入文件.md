@@ -13,7 +13,7 @@ categories:
 
 使用 [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) 对象实现读取本地文件内容。
 
-```
+```js
 let reader = new FileReader()
 reader.onload = function () {
   console.log(this.result)
@@ -32,7 +32,7 @@ reader.readAsArrayBuffer() // 返回 ArrayBuffer 对象
 
 利用 `a` 标签的 `download` 属性实现，思路是先创建一个不可见的 `a` 标签，然后掉用其 `click` 方法
 
-```
+```js
 // content 为文件内容，必须为字符串
 // filename 为文件名
 function saveFile (content, filename) {
@@ -49,7 +49,7 @@ function saveFile (content, filename) {
 
 以上方法可以实现纯文本文件的写入，要响实现写入图片，需要借助 `canvas` 实现
 
-```
+```js
 function saveImg (img, filename) {
   var canvas = document.createElement('canvas')
   var context = canvas.getcontext('2d')

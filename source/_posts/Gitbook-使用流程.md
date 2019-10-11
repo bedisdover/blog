@@ -7,13 +7,13 @@ categories: 日常记录
 
 ### 安装
 
-```
+```bash
 npm install gitbook -g
 ```
 
 ### 新建项目
 
-```
+```bash
 gitbook init
 ```
 
@@ -23,7 +23,7 @@ gitbook init
 
 新建  `book.json`  文件，内容如下：
 
-```
+```json
 {
 	"title": "title",
 	"description": "description",
@@ -47,7 +47,7 @@ gitbook init
 
 常用插件列表：
 
-```
+```text
 "toggle-chapters"
 "splitter"
 "prism"
@@ -56,20 +56,20 @@ gitbook init
 
 配置结束后，安装插件
 
-```
+```bash
 gitbook install
 ```
 
 ### 运行服务器
 
-```
+```bash
 gitbook serve
 ```
 
 默认访问路径为  `localhost:4000`
 
-### 编译静态html
+### 编译静态 html
 
-```
+```bash
 gitbook build
 ```

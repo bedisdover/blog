@@ -10,10 +10,10 @@ ubuntu 系统中无法调节亮度，且系统设置中无亮度调节
 
 ### 解决方案
 
-```
+```bash
 sudo vim /usr/share/X11/xorg.conf.d/20-intel.conf
 
-# 写入一下内容
+# 写入以下内容
 Section "Device"
         Identifier  "card0"
         Driver      "intel"

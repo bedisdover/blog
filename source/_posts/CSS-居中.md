@@ -47,7 +47,7 @@ margin 属性在相同方向上具有以下特性：
 }
 ```
 
-** 注意 **
+**注意**
 不能同时设置 float 属性，float 属性会破坏正常流
 若 inner 为 absolute 定位，可以使用 `left: 0; right: 0` 来恢复流体特性
 

@@ -12,7 +12,7 @@ categories:
 
 使用 `phpunit` 进行单元测试，在 `bootstrap.php` 中初始化 `PDO` 对象，会出现如下报错：
 
-```
+```text
 PDOException : You cannot serialize or unserialize PDO instances
 ```
 
